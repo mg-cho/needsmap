@@ -3,6 +3,8 @@
 
 *Devpost: https://devpost.com/software/needsmap*
 
+![](needsmap.png)
+
 ## Contributors:
 
 Main app, Google Maps API : **sihra**
