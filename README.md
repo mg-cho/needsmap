@@ -27,7 +27,7 @@ The second service is for those who want to help. Our interactive Google map sho
 >pip install -r requirements.pip
 
 5) Link flask to app
-C:[path to directory where your app is]>set FLASK_APP=[app file name]
+>C:[path to directory where your app is]>set FLASK_APP=[app file name]
 
 5) Run application
 >flask run
