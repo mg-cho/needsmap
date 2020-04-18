@@ -5,7 +5,7 @@
 
 ## Contributors:
 
-Idea, main app, Google Maps API : **sihra**
+Main app, Google Maps API : **sihra**
 
 Google Maps API, main app, UI, logo, design & branding: **mg-cho**
 
