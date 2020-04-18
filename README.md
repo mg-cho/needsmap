@@ -5,13 +5,13 @@
 
 ## Contributors:
 
-Idea, main app, Google Maps API : sihra
+Idea, main app, Google Maps API : **sihra**
 
-Google Maps API, main app, UI, logo, design & branding: mg-cho
+Google Maps API, main app, UI, logo, design & branding: **mg-cho**
 
-UI & registration/login: Keerthana-coder19
+UI & registration/login: **Keerthana-coder19**
 
-Database: 3ri5
+Database: **3ri5**
 
 
 ## Inspiration
