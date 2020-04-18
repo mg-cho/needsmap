@@ -3,6 +3,16 @@
 
 *Devpost: https://devpost.com/software/needsmap*
 
+## Contributors:
+
+Idea, main app, Google Maps API : sihra
+
+Google Maps API, main app, UI, logo, design & branding: mg-cho
+
+UI & registration/login: Keerthana-coder19
+
+Database: 3ri5
+
 
 ## Inspiration
 With over 53,000 people in Los Angeles County living without a home, there is a clear epidemic of homelessness in LA. Although many wish to help, the actions that one could take to assist are unclear. Thus, the needs of homeless shelters go unmet. We believe there is a sore need today for a service to facilitate more effective communication and bridge the gap between shelters and donors.
