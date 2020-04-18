@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NeedsMap</title>
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+     <title>NeedsMap</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+        <link rel="shortcut icon" href="https://lh4.googleusercontent.com/N6EYXd7N1YejhJA66m7a3fHxAC1yM_2UF2rCbhYa3W7EO-2NSihi6YB9G01n0pX2xERRgv8-EYFUOAo-RCDYc--ct9d5mwAPeXU8vVsnZghPLPBFwFxE8ndcdPmaIhvztVnsn8Ys">
+        <style>
+           @import url('https://fonts.googleapis.com/css?family=Alata|Architects+Daughter|Raleway:800&display=swap');
+
+
+            li, .navbar-brand{
+               font-family: 'Alata', sans-serif;
+                font-size: 16px;
+
+            }
+
+            body{
+               background-color:  #AADAFF; 
+            }
+
+            .container, .navbar-brand, .active, .navbar, .nav, .navbar-nav{
+                background-color: #1e365c;
+                border-color: #1e365c;
+            }
+
+            #name{
+                color:white;
+            }
+
+            .start {
+                
+                top: 120;
+                width: 100%;
+                margin-top:40px;
+                margin-bottom:0px;
+                padding-top: 5px;
+                text-align: center;
+                line-height: 20px;
+                padding-bottom:20px;
+                
+            }
+
+
+
+            
+
+
+
+       </style>
+</head>
+<body>
+ <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/"> NeedsMap</a>
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            </button>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+            {% if session.username %}
+            
+            <!-- <a href="/favorites">View my favorites</a>  -->
+            <ul class="nav navbar-nav">
+                
+                <li><a href="/">Logout</a></li>
+                <li><div id="name" style="margin-top:14px;"><span>Logged in as {{ session.username }}</span></div></li>
+
+            </ul>
+            {% else %}
+            <ul>
+                <li><a href="/login">Log In</a></li>
+                <li><a href="/register">Register</a></li>
+            </ul>
+            {% endif %}
+    </div>
+    <!--/.nav-collapse -->
+    </div>
+    </nav>
+
+
+
+
+{% extends "base.html" %}
+
+{% block title %}
+<div class="start">
+Enter the resource details below
+{% endblock %}
+{% block content %}
+{% if session.username %}
+<div id="form_container">
+    <form action="/form" method="post">
+            <p style="margin-top:8px;color:white;font-weight: bold;">Name: {{name}} </p>
+            <p style="color:white;font-weight: bold;">Location: {{location}} </p>
+            <p style="color:white;font-weight: bold;">Resource:
+            <select style="color:black;" name="resource" method="GET" action="/form">
+                <option value="{{resources[0]}}" selected>{{resources[0]}}</option>
+                {% for resource in resources[1:] %}
+                <option  value="{{resource}}">{{resource}}</option>
+                {% endfor %}
+            </select>
+            </p>
+            <p style="color:white;font-weight: bold;">
+            Priority:
+            <select style="color:black;" name="alert" method="GET" action="/form">
+                <option value="{{alerts[0]}}" selected>{{alerts[0]}}</option>
+                {% for alert in alerts[1:] %}
+                <option value="{{alert}}">{{alert}}</option>
+                {% endfor %}
+            </select>
+            </p>
+
+            <input type="submit" style="margin-bottom:8px;border-color: #4a5d23; background-color: #8a9a5b;">
+    </form>
+</div>
+</div>
+{% endif %}
+{% endblock %}
+</body>
+</html>
